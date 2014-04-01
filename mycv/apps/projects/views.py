@@ -12,6 +12,7 @@ class ProjectListView(ListView):
         context.update({
             # 'instance_archived_list':
         })
+        print context
         return context
 
 project_list_view = ProjectListView.as_view()
