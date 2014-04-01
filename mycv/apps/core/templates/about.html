@@ -1,0 +1,247 @@
+{% extends "base.html" %}
+{% load staticfiles %}
+
+{% block container %}
+<div class="col col-sm-10 col-md-8 col-lg-6 content">
+    <article class="resume">
+
+    <section id="about">
+    <div class="page-header no-top-margin"><h2>About</h2></div>
+    <div class="container">
+        <div class="row">
+            <div class="col col-md-8 col-sm-12">
+                <div>
+                        Skilled internet and client/server technologist
+                    <!--
+                    with over ten years of experience in the area of
+                    software systems architecture  and development,
+                    configuration management,
+                    diagnostics and general IT expertise.
+                    Proficient in web-based application development using Python and Ruby programming languages
+                    with expert knowledge of numerous frameworks.
+                    Possesses a strong understanding of core principles for advanced software
+                    design and high quality code creation. Creativity, ability to achieve goals,
+                    exceptional communication and interpersonal skills is an inherent asset.
+                    -->
+                </div>
+                <div id="contact"><strong>Contact:</strong></div>
+                <a href="mailto:pkalinsky@greenlightgo.co">pkalinsky@greenlightgo.co</a>
+                <address>
+                4545 Center Blvd, Apt 406<br>
+                Long Island City, NY 11109<br>
+                </address>
+            </div>
+
+            <div class="col-md-4 hidden-sm">
+                <img src="{% static 'img/pk-200x212.png' %}" width="200" height="212" align="right" style="padding: 0 0 20px 20px;" alt="Philip I Thomas"/>
+            </div>
+        </div>
+    </div>
+    </section>
+
+    <section id="core">
+        <ul id="tabs" class="nav nav-tabs">
+            <li class="active">
+                <a href="#tab1" data-toggle="tab">Core skills</a>
+            </li>
+            <li class="">
+                <a href="#tab2" data-toggle="tab">Programming languages/software</a>
+            </li>
+            <li class="">
+                <a href="#tab3" data-toggle="tab">Areas of interest</a>
+            </li>
+            <!--li class="">
+                <a href="#tab3" data-toggle="tab">Programming Languages</a>
+            </li>
+            <li class="">
+                <a href="#tab4" data-toggle="tab">Software/Web Frameworks</a>
+            </li-->
+        </ul>
+        <!--div class="page-header"><h2>Core Skills</h2></div-->
+        <div class="module tab-content">
+            <div class="tab-pane well active" id="tab1">
+                <ul>
+                    <li>Designing and building data driven web applications (Django, Ruby on Rails, Flask, Zope/Plone)</li>
+                    <li>  Event driven programming, concurrent applications, messaging, distributed task queues ( ZeroMQ, Twisted, gevent, Celery)  </li>
+                    <li>Architect and implement APIs</li>
+                    <li>Data migrations, general screen scraping, unit and load testing. (Scrapy, nose, tsung)</li>
+                    <li>Real-time web applications and data analysis. (Websockets, SockJS)</li>
+                    <li>Integration of search into web apps (Django Haystack, Elaticsearch)</li>
+                    <li>Cloud computing services (Amazon Web Services, Heroku and Rackspace Cloud)</li>
+                    <li>Configuration management (zc.buildout Fabric, Salt)</li>
+                    <li>Multisite hosting using the uWSGI app services platform</li>
+                    <li> Server monitoring, configuring central logging (uWSGI metrics subsystem, Carbon/Graphite)</li>
+                </ul>
+            </div>
+            <div class="tab-pane well" id="tab2">
+                <div class="cloud">
+                    <p>Operating Systems/Hosting Platforms</p>
+                    <span class="label label-inverse">Unix (Ubuntu, Debian Linux)</span>
+                    <span class="label label-default">Amazon Web Services</span>
+                    <span class="label label-default">Raskpace Cloud</span>
+                    <span class="label label-default">Heroku</span>
+                </div>
+                <div class="cloud">
+                    <p>Programming Languages</p>
+                    <span class="label label-inverse">Python</span>
+                    <span class="label label-default">Ruby</span>
+                    <span class="label label-default">Java</span>
+                    <span class="label label-default">Unix shell scripting</span>
+                    <span class="label label-default">JavaScript</span>
+                </div>
+
+                <div class="cloud">
+                    <p>Web Frameworks</p>
+                    <span class="label label-inverse">Django</span>
+                    <span class="label label-inverse">Flask</span>
+                    <span class="label label-default">Zope/Plone</span>
+                    <span class="label label-default">Ruby On Rails</span>
+
+                <div class="cloud">
+                    <p>Libraries</p>
+                    <span class="label label-default">Scrapy</span>
+                    <span class="label label-default">Pinax</span>
+                    <span class="label label-default">Funkload</span>
+                    <span class="label label-default">Biopython</span>
+                    <span class="label label-default">Elasticsearch</span>
+                    <span class="label label-default">ZeroMQ</span>
+                </div>
+
+                <!--div class="cloud">
+                    <p>Metrics</p>
+                    <span class="label label-default">Graphite</span>
+                </div-->
+            </div>
+
+
+
+            <div class="tab-pane well" id="tab3">
+                <div class="cloud">
+                    <ul>
+                        <li>Web Frameworks</li>
+                        <li>Devops</li>
+                        <li>Messaging</li>
+                        <li>Natural Language Processing</li>
+                        <li>Machine Learning</li>
+                    </ul>
+                </div>
+            </div>
+        </div><!-- /.tab-content -->
+    </section>
+
+    <section id="experience">
+        <div class="page-header"><h2>Experience</h2></div>
+
+        <div class="module">
+            <div class="resume-title row">
+                <h4 class="left col-sm-8">The Engagement Game Lab</h4>
+                <h4 class="right col-sm-4 hidden-xs"> Boston, MA </h4>
+            </div>
+            <div class="resume-subtitle row">
+                <h5 class="left col-sm-8"> Consultant </h5>
+                <h5 class="right col-sm-4 hidden-xs"> Oct 2011 - Now </h5>
+            </div>
+            <ul>
+                <li>Built a web based multiplayer game for civic engagement. https://communityplanit.org</li>
+                <li>Full multilingual support of static and database backed content</li>
+                <li>Automated demographic and activity data metrics reporting</li>
+                <li>uWSGI to Django integration using MessagePack as the serialization format.</li>
+                <li>Caching of nearly entire database backed content</li>
+            </ul>
+        </div>
+
+        <div class="module">
+            <div class="resume-title row">
+                <h4 class="left col-sm-8"> Mirimus Inc </h4>
+                <h4 class="right col-sm-4 hidden-xs"> Long Island, NY </h4>
+            </div>
+            <div class="resume-subtitle row">
+                <h5 class="left col-sm-8"> Consultant </h5>
+                <h5 class="right col-sm-4 hidden-xs"> Oct 2011 - Now </h5>
+            </div>
+            <ul>
+                <li> Sole software developer for biotech start-up, built custom system for operations processes and product development </li>
+                <li> Applied bioinformatics tools for large dataset analyses to minimize manual labor requirements  </li>
+                <li> Established framework for a database of genome-wide sequence mining with custom features for inventory tracking  </li>
+                <li> Created automated internal BLAST sequence alignment tool for processing millions of DNA sequence reads  </li>
+                <li> Utilized biopython library to integrate with NCBI GenBank gene database with Mirimus inventory  </li>
+                <li> Created project management tool to track orders, pipeline processes and shipments with automation </li>
+            </ul>
+        </div>
+
+
+        <div class="module">
+            <div class="resume-title row">
+                <h4 class="left col-sm-8"> RedRover.co </h4>
+                <h4 class="right col-sm-4 hidden-xs"> New York, NY </h4>
+            </div>
+            <div class="resume-subtitle row">
+                <h5 class="left col-sm-8"> Consultant </h5>
+                <h5 class="right col-sm-4 hidden-xs"> June 2013 - Jan 2014 </h5>
+            </div>
+            <ul>
+                <li> configured a cluster of services managed by uWSGI platform  </li>
+                <li> Architected a web scraper installation based on the python Scrapy framework  </li>
+                <li> Implemented a workflow interface allowing a team of outsourced developers/scrapers to communicate with the staff resulting in gathering content across hundreds of publishers  </li>
+                <li> Wrote client/server messaging using the ZeroMQ messaging library  </li>
+                <li> Made use of the various messaging patterns in implementing cross language (Python, Ruby) communication between the scraper and importer systems  </li>
+                <li> Ruby on Rails web development  </li>
+            </ul>
+        </div>
+
+        <div class="module">
+            <div class="resume-title row">
+                <h4 class="left col-sm-8"> Remarketing of America LLC </h4>
+                <h4 class="right col-sm-4 hidden-xs"> Los Angeles, NY </h4>
+            </div>
+            <div class="resume-subtitle row">
+                <h5 class="left col-sm-8"> Consultant </h5>
+                <h5 class="right col-sm-4 hidden-xs"> October 2010 - April 2013 </h5>
+            </div>
+            <ul>
+                <li>Implemented Django based online asset tracking system and insurance claim processing over a SOAP Web Service</li>
+            </ul>
+        </div>
+
+        <div class="module">
+            <div class="resume-title row">
+                <h4 class="left col-sm-8"> Seesaw LLC </h4>
+                <h4 class="right col-sm-4 hidden-xs"> New York, NY </h4>
+            </div>
+            <div class="resume-subtitle row">
+                <h5 class="left col-sm-8"> Lead Developer </h5>
+                <h5 class="right col-sm-4 hidden-xs"> November 2008 - October 2010 </h5>
+            </div>
+            <ul>
+                Lead developer on a number of Python/Django projects
+                <li>
+                    Pinax based community at http://doublecrossvodka.com and http://motorlounge.com/
+                </li>
+                <li>
+                    Satchmo cart at http://www.benjaminmoore.com/
+                </li>
+            </ul>
+        </div>
+
+        <div class="module">
+            <div class="resume-title row">
+                <h4 class="left col-sm-8"> The Feedroom Inc. </h4>
+                <h4 class="right col-sm-4 hidden-xs"> New York, NY </h4>
+            </div>
+            <div class="resume-subtitle row">
+                <h5 class="left col-sm-8"> Lead Developer </h5>
+                <h5 class="right col-sm-4 hidden-xs"> November 2008 - October 2010 </h5>
+            </div>
+            <ul>
+                <li>
+                    Carried out software development for a company specializing in online video streaming and digital asset management.
+                </li>
+                <li>
+                    Worked on a system dealing with automated ingestion of rich media content as well as the associated metadata into the enterprise asset management solution. Deliverables included automated transcoding of assets, upload status monitoring. The system supports an API based on the RESTful web services.
+                </li>
+            </ul>
+        </div>
+    </section>
+    </article>
+</div>
+{% endblock %}

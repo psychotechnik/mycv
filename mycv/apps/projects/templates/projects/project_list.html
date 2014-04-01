@@ -1,0 +1,34 @@
+{% extends "projects/base_project.html" %}
+{% load staticfiles %}
+
+{% block container %}
+        hello
+
+<div class="col col-sm-10 col-md-8 col-lg-6 content">
+    <article class="resume">
+    <section id="projects">
+    <div class="page-header no-top-margin"><h2>Projects</h2></div>
+
+    <div class="container">
+        <div class="row">
+            <div class="col col-md-8 col-sm-12">
+                <div> p1 </div>
+                <div id="contact"><strong>Contact:</strong></div>
+                <a href="mailto:pkalinsky@greenlightgo.co">pkalinsky@greenlightgo.co</a>
+                <address>
+                    4545 Center Blvd, Apt 406<br>
+                    Long Island City, NY 11109<br>
+                </address>
+            </div>
+
+            <div class="col-md-4 hidden-sm">
+                <img src="{% static 'img/pk-200x212.png' %}" width="200" height="212" align="right" style="padding: 0 0 20px 20px;" alt="Philip I Thomas"/>
+            </div>
+        </div>
+    </div>
+
+    </section>
+    </article>
+</div>
+
+{% endblock %}
