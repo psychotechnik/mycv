@@ -12,4 +12,5 @@ django-cache-url==0.7.0
 south>=0.8.4
 django-grappelli>=2.5.1
 psycopg2>=2.5.2
+pylibmc>=1.2.3
 

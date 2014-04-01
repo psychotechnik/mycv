@@ -280,10 +280,13 @@ class Prod(Common):
     SECRET_KEY = values.SecretValue()
 
     DATABASES = values.DatabaseURLValue(
-        'postgres://cpi:%s@%s:5433/cpi-prod' %
+        'postgres://%s:%s@%s:%s/%s' %
         (
+            os.environ.get("DATABASE_USER", ""),
             os.environ.get("DATABASE_PASSWORD", ""),
             os.environ.get("DATABASE_HOST", "localhost"),
+            os.environ.get("DATABASE_PORT", "5432"),
+            os.environ.get("DATABASE_NAME", "mycv"),
         )
     )
     #CACHES = {
