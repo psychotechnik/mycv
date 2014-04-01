@@ -10,7 +10,8 @@ handler500 = 'mycv.apps.core.views.server_error'
 
 urlpatterns = patterns(
     'mycv.apps.core.views',
-    url(r'^$', TemplateView.as_view(template_name='about.html'), name='home'),
+    url(r'^$', TemplateView.as_view(template_name='about.html'), name='about'),
+    url(r'^resume/$', TemplateView.as_view(template_name='resume.html'), name='resume'),
     url(r'^projects/', include('mycv.apps.projects.urls', namespace='projects', app_name='projects')),
 
     #url(r'^404/$', TemplateView.as_view(template_name='404.html'), name='404'),

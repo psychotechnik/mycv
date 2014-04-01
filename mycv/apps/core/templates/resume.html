@@ -1,0 +1,144 @@
+{% extends "base.html" %}
+{% load staticfiles %}
+
+{% block container %}
+<div class="col col-sm-10 col-md-8 col-lg-6 content">
+    <article class="resume">
+
+    <section id="resume">
+    <div class="page-header no-top-margin"><h2>Resume</h2></div>
+    <div class="container">
+        <div class="row">
+            <div class="col col-md-8 col-sm-12">
+                <div>
+                        Skilled internet and client/server technologist
+                    <!--
+                    with over ten years of experience in the area of
+                    software systems architecture  and development,
+                    configuration management,
+                    diagnostics and general IT expertise.
+                    Proficient in web-based application development using Python and Ruby programming languages
+                    with expert knowledge of numerous frameworks.
+                    Possesses a strong understanding of core principles for advanced software
+                    design and high quality code creation. Creativity, ability to achieve goals,
+                    exceptional communication and interpersonal skills is an inherent asset.
+                    -->
+                </div>
+                <div id="contact"><strong>Contact:</strong></div>
+                <a href="mailto:pkalinsky@greenlightgo.co">pkalinsky@greenlightgo.co</a>
+                <address>
+                4545 Center Blvd, Apt 406<br>
+                Long Island City, NY 11109<br>
+                </address>
+            </div>
+
+            <div class="col-md-4 hidden-sm">
+                <img src="{% static 'img/pk-200x212.png' %}" width="200" height="212" align="right" style="padding: 0 0 20px 20px;" alt="Philip I Thomas"/>
+            </div>
+        </div>
+    </div>
+    </section>
+
+    <section id="experience">
+    </section>
+
+    <section id="core">
+        <ul id="tabs" class="nav nav-tabs">
+            <li class="active">
+                <a href="#tab0" data-toggle="tab">Experience</a>
+            </li>
+            <li class="">
+                <a href="#tab1" data-toggle="tab">Core skills</a>
+            </li>
+            <li class="">
+                <a href="#tab2" data-toggle="tab">Programming languages/software</a>
+            </li>
+            <li class="">
+                <a href="#tab3" data-toggle="tab">Areas of interest</a>
+            </li>
+            <!--li class="">
+                <a href="#tab3" data-toggle="tab">Programming Languages</a>
+            </li>
+            <li class="">
+                <a href="#tab4" data-toggle="tab">Software/Web Frameworks</a>
+            </li-->
+        </ul>
+        <!--div class="page-header"><h2>Core Skills</h2></div-->
+
+
+        <div class="module tab-content">
+            <div class="tab-pane well active" id="tab0">
+                {% include "experience.html"%}
+            </div>
+            <div class="tab-pane well" id="tab1">
+                <ul>
+                    <li>Designing and building data driven web applications (Django, Ruby on Rails, Flask, Zope/Plone)</li>
+                    <li>  Event driven programming, concurrent applications, messaging, distributed task queues ( ZeroMQ, Twisted, gevent, Celery)  </li>
+                    <li>Architect and implement APIs</li>
+                    <li>Data migrations, general screen scraping, unit and load testing. (Scrapy, nose, tsung)</li>
+                    <li>Real-time web applications and data analysis. (Websockets, SockJS)</li>
+                    <li>Integration of search into web apps (Django Haystack, Elaticsearch)</li>
+                    <li>Cloud computing services (Amazon Web Services, Heroku and Rackspace Cloud)</li>
+                    <li>Configuration management (zc.buildout Fabric, Salt)</li>
+                    <li>Multisite hosting using the uWSGI app services platform</li>
+                    <li> Server monitoring, configuring central logging (uWSGI metrics subsystem, Carbon/Graphite)</li>
+                    <li>Online mapping with PostGIS, GeoDjango, Leaflet.js and open map tile libraries</li>
+                    <li>UI development using JavaScript, CSS and HTML5 standards, including Twitter Bootstrap</li>
+                </ul>
+            </div>
+            <div class="tab-pane well" id="tab2">
+                <div class="cloud">
+                    <p>Operating Systems/Hosting Platforms</p>
+                    <span class="label label-inverse">Unix (Ubuntu, Debian Linux)</span>
+                    <span class="label label-default">Amazon Web Services</span>
+                    <span class="label label-default">Raskpace Cloud</span>
+                    <span class="label label-default">Heroku</span>
+                </div>
+                <div class="cloud">
+                    <p>Programming Languages</p>
+                    <span class="label label-inverse">Python</span>
+                    <span class="label label-default">Ruby</span>
+                    <span class="label label-default">Java</span>
+                    <span class="label label-default">Unix shell scripting</span>
+                    <span class="label label-default">JavaScript</span>
+                </div>
+
+                <div class="cloud">
+                    <p>Web Frameworks</p>
+                    <span class="label label-inverse">Django</span>
+                    <span class="label label-inverse">Flask</span>
+                    <span class="label label-default">Zope/Plone</span>
+                    <span class="label label-default">Ruby On Rails</span>
+
+                    <div class="cloud">
+                        <p>Libraries</p>
+                        <span class="label label-default">Scrapy</span>
+                        <span class="label label-default">Pinax</span>
+                        <span class="label label-default">Funkload</span>
+                        <span class="label label-default">Biopython</span>
+                        <span class="label label-default">Elasticsearch</span>
+                        <span class="label label-default">ZeroMQ</span>
+                    </div>
+
+                    <!--div class="cloud">
+                        <p>Metrics</p>
+                        <span class="label label-default">Graphite</span>
+                    </div-->
+                </div>
+            </div>
+            <div class="tab-pane well" id="tab3">
+                <div class="cloud">
+                    <ul>
+                        <li>Web Frameworks</li>
+                        <li>Devops</li>
+                        <li>Messaging</li>
+                        <li>Natural Language Processing</li>
+                        <li>Machine Learning</li>
+                    </ul>
+                </div>
+            </div>
+        </div><!-- /.tab-content -->
+    </section>
+    </article>
+</div>
+{% endblock %}
