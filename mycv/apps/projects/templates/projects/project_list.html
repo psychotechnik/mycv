@@ -13,20 +13,23 @@
            <div class="list-group">
            {% for project in project_list %}
               <a href="#" class="list-group-item">
+
+                <img src="/media/projects/1/cpi-logo.png" width="147" height="100" align="right"
+                     style="padding: 0 0 20px 20px;" alt="{{ project.name }}"/>
                 <h4 class="list-group-item-heading">{{ project.name }}</h4>
                 <p class="list-group-item-text">{{ project.description }}</p>
               </a>
 
               <ul id="tabs" class="nav nav-tabs">
                   <li class="active">
-                      <a href="#tab{{ project.pk }}_1" data-toggle="tab">Features</a>
+                      <a href="#tab{{ project.pk }}_1" data-toggle="tab"><h5>Features</h5></a>
                   </li>
                   <li class="">
-                      <a href="#tab{{ project.pk }}_2" data-toggle="tab">Stack</a>
+                      <a href="#tab{{ project.pk }}_2" data-toggle="tab"><h5>Stack</h5></a>
                   </li>
                   {% if project.source_url %}
                   <li class="">
-                      <a href="#tab{{ project.pk }}_3" data-toggle="tab">Source Code</a>
+                      <a href="#tab{{ project.pk }}_3" data-toggle="tab"><h5>Source Code</h5></a>
                   </li>
                   {% endif %}
               </ul>

@@ -116,8 +116,8 @@ class Common(Configuration):
     )
 
     # Static files (CSS, JavaScript, Images)
-    MEDIA_ROOT = os.environ.get("DJANGO_MEDIA_ROOT", os.path.join(BASE_DIR, 'assets'))
-    MEDIA_URL = '/assets/'
+    MEDIA_ROOT = os.environ.get("DJANGO_MEDIA_ROOT", os.path.join(BASE_DIR, 'media'))
+    MEDIA_URL = '/media/'
 
     STATIC_ROOT = os.path.join(BASE_DIR, 'static_collected')
     STATIC_URL = '/static/'
