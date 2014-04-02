@@ -4,7 +4,13 @@ from mycv.apps.projects.models import (
     Project,
     ProjectFeature,
     StackItem,
+    Client,
+    ClientObjective,
 )
+
+
+class ClientObjectiveInline(admin.StackedInline):
+    model = ClientObjective
 
 
 class ProjectFeatureInline(admin.StackedInline):
@@ -31,6 +37,19 @@ class ProjectsAdmin(admin.ModelAdmin):
         'm2m': ['stack_items', ],
     }
 admin.site.register(Project, ProjectsAdmin)
+
+
+class ClientAdmin(admin.ModelAdmin):
+    list_display = ('name', )
+    search_fields = ('name', )
+    inlines = [ClientObjectiveInline, ]
+admin.site.register(Client, ClientAdmin)
+
+
+class ClientObjectiveAdmin(admin.ModelAdmin):
+    list_display = ('title', )
+    search_fields = ('title', )
+admin.site.register(ClientObjective, ClientObjectiveAdmin)
 
 
 class ProjectFeatureAdmin(admin.ModelAdmin):
