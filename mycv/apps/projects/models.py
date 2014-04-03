@@ -19,12 +19,13 @@ class Client(models.Model):
     end_date = models.DateField()
     website = models.URLField(blank=True, default='')
     order_index = models.IntegerField(default=0)
+    is_draft = models.BooleanField(default=True)
 
     def __unicode__(self):
         return self.name
 
     class Meta:
-        ordering = ('-end_date',)
+        ordering = ('order_index', '-end_date',)
 
 
 class ClientObjective(models.Model):
@@ -66,3 +67,11 @@ class StackItem(models.Model):
 
     def __unicode__(self):
         return self.name
+
+
+class Skill(models.Model):
+    category = models.ForeignKey('categories.Category', null=True, blank=True)
+    description = models.TextField(max_length=500, blank=True, default='')
+
+    def __unicode__(self):
+        return self.description

@@ -42,8 +42,7 @@
     </div>
     </section>
 
-    <section id="experience">
-    </section>
+    <section id="experience"> </section>
 
     <section id="core">
         <ul id="tabs" class="nav nav-tabs">
@@ -68,23 +67,10 @@
 
         <div class="module tab-content">
             <div class="tab-pane well active" id="tab0">
-                {% include "experience.html"%}
+                {% include "_experience.html"%}
             </div>
             <div class="tab-pane well" id="tab1">
-                <ul>
-                    <li>Designing and building data driven web applications (Django, Ruby on Rails, Flask, Zope/Plone)</li>
-                    <li>  Event driven programming, concurrent applications, messaging, distributed task queues ( ZeroMQ, Twisted, gevent, Celery)  </li>
-                    <li>Architect and implement APIs</li>
-                    <li>Data migrations, general screen scraping, unit and load testing. (Scrapy, nose, tsung)</li>
-                    <li>Real-time web applications and data analysis. (Websockets, SockJS)</li>
-                    <li>Integration of search into web apps (Django Haystack, Elaticsearch)</li>
-                    <li>Cloud computing services (Amazon Web Services, Heroku and Rackspace Cloud)</li>
-                    <li>Configuration management (zc.buildout Fabric, Salt)</li>
-                    <li>Multisite hosting using the uWSGI app services platform</li>
-                    <li> Server monitoring, configuring central logging (uWSGI metrics subsystem, Carbon/Graphite)</li>
-                    <li>Online mapping with PostGIS, GeoDjango, Leaflet.js and open map tile libraries</li>
-                    <li>UI development using JavaScript, CSS and HTML5 standards, including Twitter Bootstrap</li>
-                </ul>
+                {% include "_skills.html"%}
             </div>
             <div class="tab-pane well" id="tab2">
                 <div class="cloud">

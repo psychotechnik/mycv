@@ -6,6 +6,7 @@ from mycv.apps.projects.models import (
     StackItem,
     Client,
     ClientObjective,
+    Skill,
 )
 
 
@@ -40,7 +41,7 @@ admin.site.register(Project, ProjectsAdmin)
 
 
 class ClientAdmin(admin.ModelAdmin):
-    list_display = ('name', )
+    list_display = ('name', 'order_index', 'is_draft')
     search_fields = ('name', )
     inlines = [ClientObjectiveInline, ]
 admin.site.register(Client, ClientAdmin)
@@ -62,3 +63,10 @@ class StackItemAdmin(admin.ModelAdmin):
     list_display = ('name', 'description')
     search_fields = ('name', 'description')
 admin.site.register(StackItem, StackItemAdmin)
+
+
+class SkillAdmin(admin.ModelAdmin):
+    list_display = ('description', 'category')
+    list_filter = ('category', )
+    search_fields = ('description',)
+admin.site.register(Skill, SkillAdmin)

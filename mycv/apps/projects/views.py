@@ -1,5 +1,21 @@
 from django.views.generic.list import ListView
-from mycv.apps.projects.models import Project
+from mycv.apps.projects.models import Project, Client, ClientObjective
+
+
+class ClientListView(ListView):
+    model = Client
+    template_name = "resume.html"
+    queryset = Client.objects.exclude(is_draft=True)
+
+    def get_context_data(self, **kwargs):
+        context = super(ClientListView, self).get_context_data(**kwargs)
+        context.update({
+            # 'instance_archived_list':
+        })
+        print context
+        return context
+
+client_list_view = ClientListView.as_view()
 
 
 class ProjectListView(ListView):

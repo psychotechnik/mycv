@@ -21,6 +21,7 @@ class Common(Configuration):
 
     DEBUG = True
     TEMPLATE_DEBUG = DEBUG
+    THUMBNAIL_DEBUG = DEBUG
 
     ALLOWED_HOSTS = []
 
@@ -52,6 +53,7 @@ class Common(Configuration):
         'django.contrib.staticfiles',
 
         'mycv.apps.core',
+        'mycv.apps.accounts',
         'mycv.apps.projects',
 
         # Need this after web.admin because of test runner:
@@ -59,6 +61,9 @@ class Common(Configuration):
         'django.contrib.admin',
 
         # 3rd party
+        'sorl.thumbnail',
+        'categories',
+        'categories.editor',
         'django_extensions',
         'south',
         #south installs its own test command that turns off migrations during testing.
@@ -228,8 +233,8 @@ class Dev(Common):
     #STATICFILES_STORAGE = (
     #    'django.contrib.staticfiles.storage.StaticFilesStorage'
     #)
-    #Common.INSTALLED_APPS += ('debug_toolbar', )
-    #Common.MIDDLEWARE_CLASSES += ('debug_toolbar.middleware.DebugToolbarMiddleware', )
+    Common.INSTALLED_APPS += ('debug_toolbar', )
+    Common.MIDDLEWARE_CLASSES += ('debug_toolbar.middleware.DebugToolbarMiddleware', )
     DEBUG_TOOLBAR_PATCH_SETTINGS = False
     DEBUG_TOOLBAR_PANELS = [
         'debug_toolbar.panels.versions.VersionsPanel',

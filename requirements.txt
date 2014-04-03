@@ -13,4 +13,6 @@ south>=0.8.4
 django-grappelli>=2.5.1
 psycopg2>=2.5.2
 pylibmc>=1.2.3
+django-categories>=1.2.2
+sorl-thumbnail>=11.12
 

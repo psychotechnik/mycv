@@ -1,0 +1,18 @@
+{% for client in client_list %}
+<div class="module">
+    <div class="resume-title row">
+        <h4 class="left col-sm-8">{{ client.name }}</h4>
+        <h4 class="right col-sm-4 hidden-xs">{{ client.city }}, {{ client.state }}</h4>
+    </div>
+    <div class="resume-subtitle row">
+        <h5 class="left col-sm-4"> {{ client.get_title_display }} </h5>
+        <h5 class="right col-sm-8 hidden-xs"> {{ client.start_date|date:"M" }} {{ client.start_date.year }} - {{ client.end_date|date:"M" }} {{ client.end_date.year }} </h5>
+    </div>
+    <ul>
+        {% for objective in client.objectives.all %}
+        <li>{{ objective.title }}</li>
+        {% endfor %}
+    </ul>
+</div>
+{% endfor %}
+
