@@ -1,14 +1,20 @@
 from django.db import models
 from django.utils.translation import ugettext_lazy as _
+from django.conf import settings
 
 
 class Client(models.Model):
-
     CLIENT_TITLE_CHOICES = (
         (1, _("Consultant")),
         (2, _("Lead Developer")),
         #(3, _("")),
         #(4, _("")),
+    )
+    applicant = models.ForeignKey(
+        settings.AUTH_USER_MODEL,
+        verbose_name=_('applicant'),
+        related_name="clients",
+        null=True, blank=True,
     )
     title = models.IntegerField(max_length=2, choices=CLIENT_TITLE_CHOICES)
     name = models.CharField(max_length=50)
@@ -62,6 +68,12 @@ class ProjectFeature(models.Model):
 
 
 class StackItem(models.Model):
+    applicant = models.ForeignKey(
+        settings.AUTH_USER_MODEL,
+        verbose_name=_('applicant'),
+        related_name="stack_items",
+        null=True, blank=True,
+    )
     name = models.CharField(max_length=50)
     description = models.TextField(max_length=250, blank=True, default='')
 
@@ -70,6 +82,12 @@ class StackItem(models.Model):
 
 
 class Skill(models.Model):
+    applicant = models.ForeignKey(
+        settings.AUTH_USER_MODEL,
+        verbose_name=_('applicant'),
+        related_name="skills",
+        null=True, blank=True,
+    )
     category = models.ForeignKey('categories.Category', null=True, blank=True)
     description = models.TextField(max_length=500, blank=True, default='')
 

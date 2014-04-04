@@ -11,7 +11,8 @@
     <title>Philip Kalinsky CV</title>
 
     <!-- Le styles -->
-    <--link rel="stylesheet" href="{% static 'css/bootstrap.min.css' %}"-->
+    <link rel="stylesheet" href="{% static 'css/styles.css' %}">
+    <link rel="stylesheet" href="{% static 'css/bootstrap.min.css' %}">
     <style type="text/css">.wf-loading .logo,.wf-loading .sidebar,.wf-loading .container{visibility:hidden;}</style>
 
     <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
@@ -22,7 +23,9 @@
     <![endif]-->
 
     <!-- Custom styles for this template -->
+    {% comment %}
     <link rel="stylesheet" href="{% static 'css/main.css' %}">
+    {% endcomment %}
 
 
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js"></script>
@@ -60,9 +63,9 @@
     <div class="collapse navbar-collapse navbar-ex1-collapse">
         <ul class="nav navbar-nav">
             <!--li><a href="/posts/">Posts</a></li-->
-            <li><a href="/">About</a></li>
-            <li><a href="/resume/">Resume</a></li>
+            <li><a href="/resume/">About</a></li>
             <li><a href="/projects/all/">Projects</a></li>
+            <li><a href="/contact/">Contact</a></li>
         </ul>
     </div>
 </nav>
@@ -74,9 +77,9 @@
         <div class="col col-lg-2 col-lg-offset-1 col-md-2 col-sm-2">
             <ul class="nav nav-pills nav-stacked sidebar hidden-xs">
                 <!--li><a href="/posts/">Posts</a></li-->
-                <li><a href="/">About</a></li>
-                <li><a href="/resume/">Resume</a></li>
+                <li><a href="/resume/">About</a></li>
                 <li><a href="/projects/all/">Projects</a></li>
+                <li><a href="/contact/">Contact</a></li>
             </ul>
         </div>
     {% block container %}{% endblock container %}

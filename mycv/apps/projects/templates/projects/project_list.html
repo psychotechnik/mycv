@@ -14,14 +14,18 @@
            {% for project in project_list %}
               <a href="#" class="list-group-item">
 
-                <img src="/media/projects/1/cpi-logo.png" width="147" height="100" align="right"
-                     style="padding: 0 0 20px 20px;" alt="{{ project.name }}"/>
+                <!--img src="/media/projects/1/cpi-logo.png" width="147" height="100" align="right"
+                     style="padding: 0 0 20px 20px;" alt="{{ project.name }}"/-->
+
                 <h4 class="list-group-item-heading">{{ project.name }}</h4>
-                <p class="list-group-item-text">{{ project.description }}</p>
+                <!--p class="list-group-item-text">{{ project.description }}</p-->
               </a>
 
               <ul id="tabs" class="nav nav-tabs">
                   <li class="active">
+                      <a href="#tab{{ project.pk }}_0" data-toggle="tab"><h5>Description</h5></a>
+                  </li>
+                  <li class="">
                       <a href="#tab{{ project.pk }}_1" data-toggle="tab"><h5>Features</h5></a>
                   </li>
                   <li class="">
@@ -35,7 +39,10 @@
               </ul>
 
               <div class="tab-content">
-                  <div class="tab-pane well fade active in" id="tab{{ project.pk }}_1">
+                  <div class="tab-pane well fade active in " id="tab{{ project.pk }}_0">
+                      <p>{{ project.description }} </p>
+                  </div>
+                  <div class="tab-pane well" id="tab{{ project.pk }}_1">
                       <ul>
                           {% for feature in project.features.all %}
                           <li>{{ feature.name }}</li>
@@ -51,9 +58,7 @@
                   </div>
                   {% if project.source_url %}
                   <div class="tab-pane well" id="tab{{ project.pk }}_3">
-                          <p>
-                              <a target="_blank" href="{{ project.source_url }}">{{ project.source_url }}</a>
-                          </p>
+                      <p><a target="_blank" href="{{ project.source_url }}">{{ project.source_url }}</a></p>
                   </div>
                   {% endif %}
 

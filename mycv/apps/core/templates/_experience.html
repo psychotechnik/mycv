@@ -1,7 +1,14 @@
 {% for client in client_list %}
 <div class="module">
     <div class="resume-title row">
-        <h4 class="left col-sm-8">{{ client.name }}</h4>
+        <h4 class="left col-sm-8">
+            {% if client.website %}
+            <a target="_blank" href="{{ client.website  }}">{{ client.name }} </a>
+            {% else %}
+            {{ client.name }}
+            {% endif %}
+
+        </h4>
         <h4 class="right col-sm-4 hidden-xs">{{ client.city }}, {{ client.state }}</h4>
     </div>
     <div class="resume-subtitle row">

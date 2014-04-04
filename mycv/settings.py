@@ -27,6 +27,8 @@ class Common(Configuration):
 
     ADMINS = (('Philip Kalinsky', 'pkalinsky@greenlightgo.co'), )
 
+    AUTH_USER_MODEL = 'accounts.MyCVUser'
+
     DATE_FORMAT = '%m/%d/%Y'
 
     EMAIL = values.EmailURLValue('console://')

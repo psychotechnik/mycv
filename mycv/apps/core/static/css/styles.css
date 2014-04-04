@@ -1,0 +1,465 @@
+/* Tweaks to basic Boostrap layout */
+/* Colors */
+/* Fonts */
+/* line 6, ../scss/_custom.scss */
+h1, h2, h3, h4, h5, h6, .h1, .h2, .h3, .h4, .h5, .h6 {
+  font-family: "museo-slab", serif;
+  font-weight: 400;
+}
+
+/* line 11, ../scss/_custom.scss */
+body {
+  font-family: "museo-sans", sans-serif;
+  line-height: 23px;
+}
+
+/* line 15, ../scss/_custom.scss */
+p {
+  margin-top: 15px;
+}
+
+/* line 18, ../scss/_custom.scss */
+h1, h2, h3 {
+  margin-top: 30px;
+}
+
+/* line 22, ../scss/_custom.scss */
+.table td {
+  border: 0 !important;
+}
+
+/* line 25, ../scss/_custom.scss */
+.navbar {
+  border: 0;
+  border-radius: 0;
+  background-color: #000000;
+  -webkit-border-radius: 0px;
+  -moz-border-radius: 0px;
+}
+/* line 32, ../scss/_custom.scss */
+.navbar .logo {
+  width: 100%;
+  text-align: center;
+  position: absolute;
+  height: 100%;
+  display: block;
+  padding: 11px 0;
+}
+/* line 40, ../scss/_custom.scss */
+.navbar .navbar-toggle {
+  border: 0;
+  background-color: black;
+  border-radius: 0;
+  -webkit-border-radius: 0px;
+  -moz-border-radius: 0px;
+}
+/* line 47, ../scss/_custom.scss */
+.navbar .icon-bar {
+  border-radius: 0;
+  -webkit-border-radius: 0px;
+  -moz-border-radius: 0px;
+}
+
+/* line 54, ../scss/_custom.scss */
+.torso {
+  padding-top: 100px;
+}
+
+/* Links */
+/* line 59, ../scss/_custom.scss */
+a {
+  color: #999999;
+  text-decoration: none;
+}
+/* line 63, ../scss/_custom.scss */
+a:hover, a:focus {
+  color: #333333;
+  text-decoration: bold;
+}
+
+/* line 69, ../scss/_custom.scss */
+header {
+  margin-bottom: 20px;
+}
+/* line 71, ../scss/_custom.scss */
+header h1 {
+  margin: 0;
+}
+/* line 73, ../scss/_custom.scss */
+header h1 a {
+  color: black;
+}
+/* line 77, ../scss/_custom.scss */
+header .subtitle {
+  color: #999999;
+  font-size: 85%;
+  padding-top: 5px;
+}
+
+/* line 85, ../scss/_custom.scss */
+a:hover,
+a:focus {
+  color: #262626;
+  text-decoration: bold;
+}
+
+/* Sidebar */
+/* line 91, ../scss/_custom.scss */
+.navbar-nav, .sidebar {
+  font-family: "museo-slab", serif;
+  font-weight: 500;
+}
+
+/* line 95, ../scss/_custom.scss */
+.sidebar > li > a {
+  color: black;
+}
+
+/* line 99, ../scss/_custom.scss */
+.sidebar {
+  position: fixed;
+  margin-top: 100px;
+}
+
+/* Main formatting */
+/* line 104, ../scss/_custom.scss */
+.title {
+  color: white;
+  font-weight: 700;
+  font-size: 50px;
+}
+
+/* Page top */
+/* line 112, ../scss/_custom.scss */
+.forehead {
+  /*position: relative;*/
+  position: fixed;
+  width: 100%;
+  color: white;
+  text-align: center;
+  background-color: black;
+  padding: 17px 0 17px;
+  margin-bottom: 30px;
+  opacity: 1;
+  z-index: 99;
+}
+
+/* Custom goodies */
+/* line 126, ../scss/_custom.scss */
+.highlight {
+  background: #ffff00;
+}
+
+/* line 133, ../scss/_custom.scss */
+.logo h1 {
+  margin: 0;
+  font-family: 'omnes-pro', 'museo-sans', sans-serif;
+  text-transform: uppercase;
+  font-size: 18px;
+  letter-spacing: 6px;
+  font-weight: 100;
+}
+/* line 141, ../scss/_custom.scss */
+.logo a {
+  color: #ffffff;
+  text-decoration: none;
+}
+/* line 145, ../scss/_custom.scss */
+.logo .camel {
+  font-size: 141%;
+  /* square root of 2 ratio, hah */
+  letter-spacing: 6px;
+}
+
+@media (max-width: 350px) {
+  /* line 152, ../scss/_custom.scss */
+  .navbar .logo h1 {
+    text-align: left;
+    padding-left: 11px;
+  }
+}
+@media (max-width: 768px) {
+  /* line 160, ../scss/_custom.scss */
+  .logo h1 {
+    font-weight: 300;
+  }
+
+  /* line 163, ../scss/_custom.scss */
+  .sidebar {
+    display: none !important;
+  }
+}
+@media (min-width: 768px) {
+  /* line 169, ../scss/_custom.scss */
+  .navbar-nav {
+    display: none !important;
+  }
+}
+/* line 173, ../scss/_custom.scss */
+footer {
+  padding: 40px;
+  position: relative;
+  text-align: center;
+  margin-top: 50px;
+  font-size: 12px;
+  font-family: "museo-slab", serif;
+}
+
+/* line 182, ../scss/_custom.scss */
+.no-margin {
+  margin: 0;
+}
+
+/* line 186, ../scss/_custom.scss */
+img.center {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+/* line 191, ../scss/_custom.scss */
+pre {
+  font-family: "source-code-pro",sans-serif;
+}
+
+/* line 195, ../scss/_custom.scss */
+blockquote p {
+  font-size: inherit;
+}
+
+/* line 199, ../scss/_custom.scss */
+.alert {
+  border: 0;
+  border-radius: 0;
+  -webkit-border-radius: 0px;
+  -moz-border-radius: 0px;
+}
+
+/* line 206, ../scss/_custom.scss */
+.hightlight {
+  background: #ffff00;
+}
+
+/* Posts */
+/* line 213, ../scss/_custom.scss */
+.panel, .panel-heading {
+  border-radius: 0;
+  -webkit-border-radius: 0px;
+  -moz-border-radius: 0px;
+  -webkit-box-shadow: 0;
+  box-shadow: 0;
+}
+
+/* line 220, ../scss/_custom.scss */
+.panel-reverse {
+  border-color: black;
+}
+
+/* line 223, ../scss/_custom.scss */
+.panel-reverse > .panel-heading {
+  color: black;
+  background-color: white;
+  border-color: black;
+}
+
+/* line 228, ../scss/_custom.scss */
+.panel-reverse > .panel-heading + .panel-collapse .panel-body {
+  border-top-color: black;
+}
+
+/* line 231, ../scss/_custom.scss */
+.panel-reverse > .panel-footer + .panel-collapse .panel-body {
+  border-bottom-color: black;
+}
+
+/* line 235, ../scss/_custom.scss */
+.about-box {
+  margin-top: 60px;
+}
+
+/* Some outbrain tweaks */
+/* line 240, ../scss/_custom.scss */
+.ob_org_header {
+  font-family: "museo-slab", serif;
+}
+
+/* line 244, ../scss/_custom.scss */
+.outbrain {
+  padding-top: 30px;
+}
+
+/* Posts page */
+/* line 250, ../scss/_custom.scss */
+#posts .date {
+  width: 30%;
+}
+/* line 253, ../scss/_custom.scss */
+#posts .title {
+  width: 70%;
+}
+/* line 256, ../scss/_custom.scss */
+#posts td {
+  border: 0;
+}
+
+/* line 260, ../scss/_custom.scss */
+.business-card {
+  width: 350px;
+  height: 200px;
+  margin: 20px auto;
+  background-color: #000000;
+  color: #ffffff;
+  text-align: center;
+  font-family: 'omnes-pro', 'museo-sans', sans-serif;
+}
+/* line 268, ../scss/_custom.scss */
+.business-card a {
+  color: #ffffff;
+}
+/* line 271, ../scss/_custom.scss */
+.business-card .panel-body {
+  display: inline;
+  vertical-align: middle;
+}
+/* line 275, ../scss/_custom.scss */
+.business-card .logo {
+  padding: 15px 0 20px;
+}
+/* line 278, ../scss/_custom.scss */
+.business-card .logo-body {
+  font-size: 80%;
+}
+
+/* line 283, ../scss/_custom.scss */
+.full-width {
+  width: 100%;
+}
+
+/* line 287, ../scss/_custom.scss */
+.btn {
+  border-radius: 0;
+  -webkit-border-radius: 0px;
+  -moz-border-radius: 0px;
+  -webkit-box-shadow: 0;
+  box-shadow: 0;
+}
+
+/* line 295, ../scss/_custom.scss */
+.btn-inverse {
+  color: #ffffff;
+  background-color: #000000;
+}
+
+/* line 300, ../scss/_custom.scss */
+.label-inverse {
+  color: #ffffff;
+  background-color: #000000;
+}
+
+/* line 305, ../scss/_custom.scss */
+.no-top-margin {
+  margin-top: 0;
+}
+
+/* line 309, ../scss/_custom.scss */
+pre {
+  border: 0;
+  border-radius: 0;
+  -webkit-border-radius: 0px;
+  -moz-border-radius: 0px;
+}
+
+/* Custom styling for resume */
+/* Custom css for the resume page  */
+/* line 3, ../scss/_resume.scss */
+.resume .page-header {
+  margin-top: 0;
+}
+/* line 6, ../scss/_resume.scss */
+.resume header {
+  text-align: center;
+}
+/* line 10, ../scss/_resume.scss */
+.resume .resume-title h1, .resume .resume-title h2, .resume .resume-title h3, .resume .resume-title h4, .resume .resume-title h5, .resume .resume-title h6, .resume .resume-subtitle h1, .resume .resume-subtitle h2, .resume .resume-subtitle h3, .resume .resume-subtitle h4, .resume .resume-subtitle h5, .resume .resume-subtitle h6 {
+  font-family: "museo-sans", sans-serif;
+}
+/* line 13, ../scss/_resume.scss */
+.resume .resume-title .right, .resume .resume-subtitle .right {
+  text-align: right;
+}
+/* line 18, ../scss/_resume.scss */
+.resume .resume-title h1, .resume .resume-title h2, .resume .resume-title h3, .resume .resume-title h4, .resume .resume-title h5, .resume .resume-title h6 {
+  font-weight: 500;
+}
+/* line 23, ../scss/_resume.scss */
+.resume .resume-subtitle h1, .resume .resume-subtitle h2, .resume .resume-subtitle h3, .resume .resume-subtitle h4, .resume .resume-subtitle h5, .resume .resume-subtitle h6 {
+  margin-top: 0;
+  font-weight: 300;
+}
+/* line 28, ../scss/_resume.scss */
+.resume li {
+  font-weight: 300;
+}
+/* line 30, ../scss/_resume.scss */
+.resume li strong {
+  font-weight: 500;
+}
+/* line 34, ../scss/_resume.scss */
+.resume .module {
+  padding-bottom: 20px;
+}
+/* line 38, ../scss/_resume.scss */
+.resume .panel-body ul {
+  padding-left: 10px;
+}
+/* line 42, ../scss/_resume.scss */
+.resume .no-padding {
+  padding: 0;
+}
+/* line 45, ../scss/_resume.scss */
+.resume #labs-button {
+  margin-top: 30px;
+}
+/* line 51, ../scss/_resume.scss */
+.resume #honors .left {
+  font-weight: 700;
+}
+@media (min-width: 768px) {
+  /* line 51, ../scss/_resume.scss */
+  .resume #honors .left {
+    float: right;
+  }
+}
+/* line 58, ../scss/_resume.scss */
+.resume #honors .right ul {
+  list-style: none;
+  padding-left: 0;
+}
+/* line 61, ../scss/_resume.scss */
+.resume #honors .right ul li {
+  padding-bottom: 10px;
+}
+/* line 68, ../scss/_resume.scss */
+.resume #contact {
+  padding-top: 10px;
+}
+
+/* Custom styling for projects */
+/* line 2, ../scss/_projects.scss */
+.labs .col {
+  padding: 5px;
+}
+/* line 5, ../scss/_projects.scss */
+.labs h3 {
+  margin-top: 0;
+}
+/* line 8, ../scss/_projects.scss */
+.labs .thumbnail {
+  border-radius: 0;
+  -webkit-border-radius: 0px;
+  -moz-border-radius: 0px;
+}
+/* line 13, ../scss/_projects.scss */
+.labs .thumbnail {
+  margin-bottom: 8px;
+}

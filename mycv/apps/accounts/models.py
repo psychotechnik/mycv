@@ -71,17 +71,19 @@ class MyCVUser(AbstractBaseUser):
     avatar = ImageField(max_length=255, upload_to=determine_path, null=True, blank=True)
     address = models.ForeignKey("core.Address", null=True, blank=True)
 
+    github_username = models.CharField(_('GitHub account username'), max_length=30, blank=True)
+
     USERNAME_FIELD = 'email'
     REQUIRED_FIELDS = []
 
     objects = MyCVUserManager()
 
     def __unicode__(self):
-        return "%s's" % self.screen_name
+        return u"%s's" % self.screen_name
 
     class Meta:
-        verbose_name = _("Applicant Profile")
-        verbose_name_plural = _("Applicant profiles")
+        verbose_name = _(u"Applicant Profile")
+        verbose_name_plural = _(u"Applicant profiles")
 
     #@models.permalink
     #def get_absolute_url(self):
@@ -97,7 +99,7 @@ class MyCVUser(AbstractBaseUser):
         if last:
             if len(last) > 1:
                 last = last[0].upper() + last[1:]
-                last = "%s." % last[0]
+                last = u"%s." % last[0]
             else:
                 last = last[0]
         if first or last:
@@ -114,7 +116,6 @@ class MyCVUser(AbstractBaseUser):
     def get_short_name(self):
         """ Returns the short name for the user."""
         return self.first_name
-
 
     #permissions related methods
     def get_group_permissions(self, obj=None):

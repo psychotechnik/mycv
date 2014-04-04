@@ -1,5 +1,5 @@
 {% extends "base.html" %}
-{% load staticfiles %}
+{% load staticfiles thumbnail %}
 
 {% block container %}
 <div class="col col-sm-10 col-md-8 col-lg-6 content">
@@ -7,12 +7,9 @@
 
     <section id="resume">
     <div class="page-header no-top-margin"><h2>Resume</h2></div>
-    <div class="container">
         <div class="row">
             <div class="col col-md-8 col-sm-12">
-                <div>
                         Skilled internet and client/server technologist
-                    <!--
                     with over ten years of experience in the area of
                     software systems architecture  and development,
                     configuration management,
@@ -22,24 +19,38 @@
                     Possesses a strong understanding of core principles for advanced software
                     design and high quality code creation. Creativity, ability to achieve goals,
                     exceptional communication and interpersonal skills is an inherent asset.
-                    -->
-                </div>
+
+                {% comment %} show email or address ?
                 <div id="contact"><strong>Contact:</strong></div>
                 <address>
                     4545 Center Blvd, Apt 406<br>
                     Long Island City, NY 11109<br>
                 </address>
-                <a href="mailto:pkalinsky@greenlightgo.co">pkalinsky@greenlightgo.co</a>
-                <a style="padding-left:10px;" target="_blank" href="http://github.com/psychotechnik">
+                <a href="mailto:{{ applicant.email }}">{{ applicant.email }}</a>
+                {% endcomment %}
+
+                {% if applicant.github_username %}
+                <a style="padding-left:10px;" target="_blank" href="http://github.com/{{ applicant.github_username }}">
                     <img src="{% static 'img/GitHub-Mark-32px.png' %}">
                 </a>
+                {% endif %}
             </div>
 
             <div class="col-md-4 hidden-sm">
-                <img src="{% static 'img/pk-200x212.png' %}" width="200" height="212" align="right" style="padding: 0 0 20px 20px;" alt=""/>
+                {% comment %}
+                <img src="{% static 'img/pk-200x212.png' %}" width="200" height="212"
+                     align="right" style="padding: 0 0 20px 20px;" alt=""/>
+                {% endcomment %}
+
+                {% if applicant.avatar %}
+                {% thumbnail applicant.avatar "200" crop="center" as image %}
+                <img class="avatar" src="{{ image.url }}"
+                     width="{{ image.width }}" height="{{ image.height }}"
+                     align="right" style="padding: 0 0 20px 20px;">
+                {% endthumbnail %}
+                {% endif %}
             </div>
         </div>
-    </div>
     </section>
 
     <section id="experience"> </section>

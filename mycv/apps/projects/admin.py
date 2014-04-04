@@ -41,7 +41,7 @@ admin.site.register(Project, ProjectsAdmin)
 
 
 class ClientAdmin(admin.ModelAdmin):
-    list_display = ('name', 'order_index', 'is_draft')
+    list_display = ('name', 'order_index', 'applicant', 'is_draft')
     search_fields = ('name', )
     inlines = [ClientObjectiveInline, ]
 admin.site.register(Client, ClientAdmin)
@@ -60,13 +60,13 @@ admin.site.register(ProjectFeature, ProjectFeatureAdmin)
 
 
 class StackItemAdmin(admin.ModelAdmin):
-    list_display = ('name', 'description')
+    list_display = ('name', 'description', 'applicant')
     search_fields = ('name', 'description')
 admin.site.register(StackItem, StackItemAdmin)
 
 
 class SkillAdmin(admin.ModelAdmin):
-    list_display = ('description', 'category')
-    list_filter = ('category', )
+    list_display = ('description', 'category', 'applicant')
+    list_filter = ('category', 'applicant')
     search_fields = ('description',)
 admin.site.register(Skill, SkillAdmin)
