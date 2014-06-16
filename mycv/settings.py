@@ -25,8 +25,7 @@ class Common(Configuration):
 
     ALLOWED_HOSTS = []
 
-    ADMINS = (('Philip Kalinsky', 'pkalinsky@greenlightgo.co'), )
-
+    ADMINS = (('Philip Kalinsky', 'philip.kalinsky@eloquentbits.com'), )
     AUTH_USER_MODEL = 'accounts.MyCVUser'
 
     DATE_FORMAT = '%m/%d/%Y'
@@ -228,7 +227,7 @@ class Dev(Common):
 
     SECRET_KEY = '[a09s8=b-axm;lk123'
 
-    DATABASES = values.DatabaseURLValue('postgres://mycv:@localhost:5433/mycv')
+    DATABASES = values.DatabaseURLValue('postgres://mycv:@localhost:5432/mycv')
 
     ALLOWED_HOSTS = ['.slipperyslo.pe', ]
 
